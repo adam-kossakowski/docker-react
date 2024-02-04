@@ -9,13 +9,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload. Hello World!
         </p>
+        <p>I was changed! Feature branch 1.1</p>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          I was changed! Feature branch 1.1
+          Learn React
         </a>
       </header>
     </div>
