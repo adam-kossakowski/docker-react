@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: docker build -t cygnetops/react-test -f Dockerfile.dev .
-      - run: docker run -e CI=true cygnetops/react-test npm test
+      - run: docker build -t docker-react -f Dockerfile.dev .
+      - run: docker run -e CI=true docker-react npm test
 
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
@@ -24,5 +24,4 @@ jobs:
           environment_name: Frontend-env
           existing_bucket_name: elasticbeanstalk-eu-north-1-211125786792
           region: eu-north-1
-          version_label: ${{ github.sha }}
           deployment_package: deploy.zip
